@@ -1,0 +1,80 @@
+/* Section */
+.contact-section {
+  position: relative;
+  background: #0a0a0f;
+  padding: 120px 24px;
+  overflow: hidden;
+}
+#contact { scroll-margin-top: 90px; }
+
+/* Particles behind */
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;                /* BEHIND content */
+  pointer-events: none;
+  opacity: .65;
+}
+
+/* Center the card */
+.contact-shell {
+  position: relative;
+  z-index: 1;                /* ABOVE particles */
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Card: SOLID background so particles don’t show through */
+.contact-card {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, #0a0a0f 0%, #0b0e17 100%); /* darker & unified */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 50px rgba(59, 130, 246, 0.15);
+}
+
+.contact-card .contact-form {
+  max-width: 960px;
+}
+
+/* Optional soft top sheen */
+.contact-card::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 60% 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), transparent);
+  pointer-events: none;
+}
+
+/* Heading */
+.contact-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: #93a4c3;
+  font-size: .9rem;
+  margin: 4px 0 8px;
+}
+.contact-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #f1f5f9;
+  margin: 0 0 18px;
+  line-height: 1.1;
+}
+.contact-title span { color: #3b82f6; }
+
+/* Mobile spacing */
+@media (max-width: 520px) {
+  .contact-section { padding: 100px 18px; }
+  .contact-card { padding: 22px; }
+}

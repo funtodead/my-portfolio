@@ -1,0 +1,50 @@
+/* ===========================
+   HOME WRAPPER & GLOBAL ANIMS
+   =========================== */
+
+/* The main wrapper for all sections */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a0f;
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fade-in Scroll Animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Basic reset to ensure consistency */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Utility: spacing helpers for consistent margins */
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-6 { margin-top: 2rem; }
+
+/* Optional: section spacing override for large screens */
+@media (min-width: 1200px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}

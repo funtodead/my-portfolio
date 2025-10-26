@@ -1,0 +1,119 @@
+/* ===== 🧠 Experience Timeline ===== */
+.experience {
+  background: #0a0a0f;
+  padding: 100px 20px;
+}
+
+.experience .section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+/* Timeline wrapper */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 950px;
+  padding: 0 20px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, #2563eb 0%, #3b82f6 100%);
+  opacity: 0.6;
+  transform: translateX(-50%);
+}
+
+/* Each item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+.timeline-item.left { left: 0; }
+.timeline-item.right { left: 50%; }
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  right: -11px;
+  width: 20px;
+  height: 20px;
+  background: #0a0a0f;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.timeline-item.right::before { left: -11px; right: auto; }
+
+/* Hover pulse */
+.timeline-item:hover::before {
+  background: #3b82f6;
+  box-shadow: 0 0 12px #3b82f6;
+}
+
+/* Card content */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 25px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.timeline-content:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Text styling */
+.timeline-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin: 0 0 6px;
+}
+.timeline-content h4 {
+  font-size: 1rem;
+  color: #93c5fd;
+  margin: 0 0 6px;
+}
+.timeline-date {
+  display: block;
+  font-size: 0.9rem;
+  color: #60a5fa;
+  margin-bottom: 8px;
+}
+.timeline-content p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  .timeline::before { left: 12px; }
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    margin-bottom: 25px;
+  }
+  .timeline-item.left,
+  .timeline-item.right { left: 0; }
+  .timeline-item::before { left: 0; }
+}

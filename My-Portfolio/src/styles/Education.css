@@ -1,0 +1,113 @@
+/* ===== 🎓 Education (Clean & minimal hover) ===== */
+.education {
+    background: #0a0a0f;
+}
+
+.edu-stack {
+  display: grid;
+  gap: 22px;
+  margin-top: 18px;
+}
+
+/* Card layout */
+.edu-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: stretch;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Clean accent bar */
+.edu-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+  opacity: 0.7;
+  transform: scaleY(0.4);
+  transform-origin: top;
+  transition: transform 0.6s ease;
+}
+.edu-card:hover { transform: translateY(-3px); }
+.edu-card:hover::before { transform: scaleY(1); }
+
+/* Title styling */
+.education .section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  animation: fadeSlide 1s ease forwards;
+  opacity: 0;
+  transform: translateY(15px);
+}
+@keyframes fadeSlide {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media section */
+.edu-media {
+  position: relative;
+  background: linear-gradient(135deg, #0c1222, #0a0e1b);
+  overflow: hidden;
+}
+.edu-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+  filter: brightness(1) contrast(1.1);
+}
+.edu-card:hover .edu-media img { transform: scale(1.05); }
+
+/* Content section */
+.edu-content {
+  padding: 22px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+}
+.edu-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+.edu-sub { color: #9ca3af; font-size: 1rem; }
+.edu-year {
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  color: #60a5fa;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Points */
+.edu-points {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #c9d3e6;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.edu-points li { margin: 2px 0; }
+
+/* Responsive */
+@media (max-width: 760px) {
+  .edu-card { grid-template-columns: 1fr; }
+  .edu-media { height: 160px; }
+}

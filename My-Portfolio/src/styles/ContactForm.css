@@ -1,0 +1,99 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", "Inter", sans-serif; /* same font for all fields */
+}
+
+/* Labels */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field > span {
+  color: #cfd6e6;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Inputs + Textarea unified */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  color: #e2e8f0;
+  background: #0b0f18; /* deeper consistent tone */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit; /* ensures all use same font */
+  letter-spacing: 0.2px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6b7280;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(59, 130, 246, 0.6);
+  background: #0d1324;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+/* Centered Send Button */
+.send-btn {
+  align-self: center;
+  padding: 12px 44px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #2563eb, #1e3a8a);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.send-btn:hover {
+  background: linear-gradient(145deg, #1d4ed8, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
+}
+
+.send-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.status {
+  margin-top: 6px;
+  color: #60a5fa;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 26px;
+  }
+
+  .send-btn {
+    width: 100%;
+  }
+}

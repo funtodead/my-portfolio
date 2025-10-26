@@ -1,0 +1,119 @@
+#about-me { scroll-margin-top: 120px; }
+
+.about-me {
+  padding: 120px 0 120px;
+  background: #0a0a0f;
+  text-align: center;
+}
+
+/* Title */
+.about-me .section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 100px; /* more breathing room */
+}
+.about-me .section-title span {
+  color: #3b82f6;
+}
+
+/* Layout grid */
+.about-me-container {
+  display: grid;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;       /* centers vertically */
+  justify-items: center;
+  gap: 80px;                 /* spacing between image and text */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Image & TiltedCard */
+.about-me-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tilt-guard {
+  width: clamp(300px, 35vw, 480px);
+  max-height: 600px;
+  border-radius: 16px;
+  overflow: visible;
+}
+
+/* Ensure TiltedCard fits cleanly */
+.tilt-guard img,
+.tilt-guard canvas,
+.tilt-guard .tilted-card {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Text side */
+.about-me-text {
+  text-align: left;
+  max-width: 500px;
+}
+.about-me-text h4 {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+.about-me-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #e5e7eb;
+  margin-bottom: 1.1rem;
+}
+
+/* Info lines */
+.about-info {
+  margin-top: 1rem;
+}
+.about-info p {
+  font-size: 1.05rem;
+  color: #f3f4f6;
+  margin: 4px 0;
+}
+.about-info a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+.about-info a:hover {
+  text-decoration: underline;
+}
+
+/* Resume button */
+.resume-btn {
+  margin-top: 1.5rem;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1100px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+  .about-me-text {
+    text-align: center;
+    max-width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .about-me {
+    padding: 90px 0;
+  }
+  .about-me .section-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+  .about-me-text p {
+    font-size: 1rem;
+  }
+}
