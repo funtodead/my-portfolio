@@ -6,7 +6,7 @@ export default function Skills() {
     <section id="skills" className="skills-section fade-section">
       <div className="skills-inner">
         <h2 className="skills-title">
-          💻 Skills <span className="skills-sub">My Technical Level</span>
+           Skills  <span className="skills-sub">My Technical Level</span>
         </h2>
 
         <div className="skills-groups">

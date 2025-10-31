@@ -5,7 +5,7 @@ export default function Experience() {
   return (
     <section id="experience" className="section experience fade-section">
       <div className="section-inner">
-        <h2 className="section-title">🧠 Experience</h2>
+        <h2 className="section-title">Experience</h2>
 
         <div className="timeline">
           {/* High School & Self-Learning */}

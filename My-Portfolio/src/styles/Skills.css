@@ -1,7 +1,9 @@
 .skills-section {
   background: #0a0a0f;
-  padding: 120px 30px;
+  padding: 100px 30px; /* reduced from 120px */
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .skills-inner {

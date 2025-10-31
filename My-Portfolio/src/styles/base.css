@@ -3,6 +3,12 @@
   scroll-margin-top: 120px; /* equals your nav height + some buffer */
 }
 
+.about-me,
+.hero {
+  background-color: #0a0a0f;
+}
+
+
 html, body, #root, .app {
   width: 100%;
   height: 100%;
