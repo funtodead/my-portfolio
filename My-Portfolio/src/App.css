@@ -1,25 +1,19 @@
-/* App container sizing; leave heavy globals to base.css */
-#root, .app {
-  width: 100%;
-  min-height: 100vh;
-}
+/* App container sizing; leave heavy globals to index.css */
+#root, .app { width: 100%; min-height: 100vh; }
 
-/* Optional: scrollbar cosmetics (kept lightweight) */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #3b82f6 #0a0a0f;
+/* prevent random horizontal scroll on mobile */
+html, body, #root { overflow-x: hidden; }
+
+/* Optional: scrollbar cosmetics */
+* { scrollbar-width: thin; scrollbar-color: #3b82f6 #0a0a0f; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: #0a0a0f; }
+*::-webkit-scrollbar-thumb { background: #1f2a44; border-radius: 999px; }
+*::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+/* section default spacing */
+section { padding: 56px 16px; }
+@media (min-width: 768px){ section { padding: 72px 24px; }
 }
-*::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-*::-webkit-scrollbar-track {
-  background: #0a0a0f;
-}
-*::-webkit-scrollbar-thumb {
-  background: #1f2a44;
-  border-radius: 999px;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
+@media (min-width: 1024px){ section { padding: 96px 32px; }
 }

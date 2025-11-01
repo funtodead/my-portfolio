@@ -105,3 +105,48 @@
   .nav-link { font-weight: 700; font-size: .95rem; }
   .nav-link::after { bottom: -10px; height: 2px; }
 }
+
+/* ===== Mobile header (fix clipped nav text) ===== */
+/* ===== Mobile header (show last nav item) ===== */
+@media (max-width: 680px) {
+  .site-header { height: 64px; }
+
+  .nav-inner {
+    grid-template-columns: auto 1fr auto;
+    padding: 0 12px;
+    column-gap: 10px;
+  }
+
+  /* stretch the scroll container to full width */
+  .nav-center {
+    justify-self: stretch;         /* <— was center, causes clipping */
+    max-width: 100%;
+    overflow-x: auto;              /* horizontal scroll if needed */
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    padding-right: max(48px, env(safe-area-inset-right)); /* room for last item */
+  }
+  .nav-center::-webkit-scrollbar { display: none; }
+
+  .nav-list {
+    display: inline-flex;
+    gap: 16px;
+    white-space: nowrap;
+    min-width: max-content;
+    padding: 0 8px 2px 8px;        /* small inner padding */
+  }
+
+  .nav-link {
+    font-size: .96rem;
+    padding: 8px 2px;
+    line-height: 1.2;
+  }
+  .nav-link::after { bottom: -10px; height: 2px; }
+
+  /* anchor offset under fixed header */
+  #home, #about-me, #skills, #education, #experience, #work, #contact {
+    scroll-margin-top: 84px;
+  }
+}
